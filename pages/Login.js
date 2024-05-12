@@ -14,7 +14,7 @@ function Login() {
         event.preventDefault();
         event.preventDefault();
             try {
-                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/login`, {
+                const response = await fetch('https://serene-garden-06954-1157675d5f4a.herokuapp.com/api/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

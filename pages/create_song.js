@@ -43,7 +43,7 @@ export default function CreateSong() {
             return;
         }
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/make_song`, {
+            const response = await fetch('https://serene-garden-06954-1157675d5f4a.herokuapp.com/api/make_song', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
