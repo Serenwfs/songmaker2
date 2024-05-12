@@ -13,7 +13,7 @@ function Register() {
         try {
             console.log('API URL:', process.env.REACT_APP_API_URL);
 
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/register`, {
+            const response = await fetch('https://serene-garden-06954-1157675d5f4a.herokuapp.com/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

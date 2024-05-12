@@ -16,7 +16,7 @@ export default function CreateSong() {
             console.log('No token found, user might not be logged in');
             return;
         }
-        fetch(`${process.env.REACT_APP_API_URL}/api/genres`, {
+        fetch('https://serene-garden-06954-1157675d5f4a.herokuapp.com/api/genres', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
