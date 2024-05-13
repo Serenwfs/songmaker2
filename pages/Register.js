@@ -23,7 +23,7 @@ function Register() {
             });
             const data = await response.json();
             if (response.ok) {
-                setMessage('Registration successful');
+                setMessage('Registration successful go back home and log in');
             } else {
                 setMessage(data.error || 'Registration failed');
             }
