@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './CreateSong.module.css';
+import { useRouter } from 'next/router';
+
 
 export default function CreateSong() {
     const [genres, setGenres] = useState([]);
@@ -8,6 +10,7 @@ export default function CreateSong() {
     const [title, setTitle] = useState('');
     const [message, setMessage] = useState('');
     const [songDetails, setSongDetails] = useState(null);
+    const router = useRouter();
 
     useEffect(() => {
         const token = localStorage.getItem('token'); // Ensure the token is actually being retrieved
@@ -62,10 +65,21 @@ export default function CreateSong() {
             }));
     
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+                if (response.status === 422) {
+                    // Custom message for status 422
+                    setMessage("The provided details don't match enough entries in our database.");
+                } else {
+                    // Use the server's error message or default to a general error message
+                    setMessage(data.error || "Failed to create song due to a server error.");
+                }
+                setSongDetails(null);
+                return; // Stop further execution in case of an error
             }
-    
             const data = await response.json();
+            localStorage.setItem('user_id', data.user_id);
+            if (data.access_token) {
+                localStorage.setItem('token', data.access_token); // Update the token if a new one is received
+            }
             setMessage("Song created successfully!");
             setSongDetails(data.song_details);
         } catch (error) {
@@ -75,42 +89,41 @@ export default function CreateSong() {
         }
     };
 
-//      return (
-//         <div className={styles.container}>
-//             <h1 className={styles.title}>Create a New Song</h1>
-//             <form onSubmit={handleSubmit} className={styles.form}>
-//                 <div className={styles.inputField}>
-//                     <label>Genre:</label>
-//                     <select className={styles.select} value={selectedGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
-//                         <option value="">Select a Genre</option>
-//                         {genres.map(genre => (
-//                             <option key={genre.id} value={genre.name}>{genre.name}</option>
-//                         ))}
-//                     </select>
-//                 </div>
-//                 <div className={styles.inputField}>
-//                     <label>Dancability:</label>
-//                     <select className={styles.select} value={dancability} onChange={(e) => setDancability(e.target.value)}>
-//                         <option value="1">Not really danceable</option>
-//                         <option value="2">Somewhat Danceable</option>
-//                         <option value="3">Very Danceable</option>
-//                     </select>
-//                 </div>
-//                 <div className={styles.inputField}>
-//                     <label>Title:</label>
-//                     <input type="text" className={styles.input} value={title} onChange={(e) => setTitle(e.target.value)} />
-//                 </div>
-//                 <button type="submit" className={styles.button}>Create Song</button>
-//                 {message && <p className={styles.message}>{message}</p>}
-//             </form>
-//         </div>
-//     );
-// }
+    const handleLogout = async () => {
+        try {
+            const response = await fetch('https://serene-garden-06954-1157675d5f4a.herokuapp.com/logout', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+    
+            if (response.ok) {
+                console.log('Logged out successfully');
+                localStorage.removeItem('token');  // Remove the token from local storage
+                router.push('/').catch(err => console.error('Redirection failed:', err)); // Ensure correct case and path
+            } else {
+                throw new Error('Failed to log out on server');
+            }
+        } catch (error) {
+            console.error('Logout failed:', error);
+        }
+    };
+
+    const goToProfile = () => {
+        router.push('/UserProfile'); // Redirect to profile page
+    };
+    
+    
+
 return (
     <div className={styles.container}>
+        <button onClick={goToProfile} className={styles.profileButton}>Go to Profile</button>
+        <button onClick={handleLogout} className={styles.logoutButton}>  Logout</button>
         {!songDetails ? (
             <div>
-                <h1 className={styles.title}>Create A New Song Inspo</h1>
+                <h1 className={styles.title}>Create a new song inspo</h1>
                 <form onSubmit={handleSubmit} className={styles.form}>
                   <div className={styles.row}>
                     <div className={styles.inputField}>
@@ -136,6 +149,9 @@ return (
                     </div>  
                     <button type="submit" className={styles.button}>Create Song</button>
                 </form>
+                <button onClick={handleLogout} className={styles.logoutButton}>
+                Logout
+            </button>
                 {message && <p className={styles.message}>{message}</p>}
             </div>
         ) : (
@@ -159,7 +175,6 @@ return (
                     </div>
                 ))}
             </div>
-            <button className={styles.editButton} onClick={() => setSongDetails(null)}>Edit creation</button>
         </div>
         )}
     </div>

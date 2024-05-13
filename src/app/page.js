@@ -1,21 +1,20 @@
-
 import React from 'react';
 import Link from 'next/link';
+import styles from './Page.module.css'; // Import the CSS module
 
 const Page = () => {
+
+  
   return (
-    <div className="bg-pink-100 text-black h-screen flex flex-col items-center justify-center text-center p-4">
-      <h1 className="text-4xl font-bold mb-2 protest-guerrilla">Song Maker</h1>
-      <p className="text-xl mb-6">find inspiration through others</p>
-      {/* <Link href="/search"  legacyBehavior>
-        <a className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-700 transition-colors mb-4">Search through our songs...</a>
-      </Link> */}
-      <div className="space-x-4">
-        <Link href="/Login"  legacyBehavior>
-          <a className="bg-red-500 text-black py-2 px-4 rounded-full hover:bg-red-700 transition-colors">Log in</a>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Song Maker</h1>
+      <p className={styles.titleAnimated}>find inspiration through others</p>
+      <div className={styles.buttons}>
+        <Link href="/Login" legacyBehavior>
+          <a className={styles.button}>Log in</a>
         </Link>
         <Link href="/Register" legacyBehavior>
-          <a className="bg-red-500 text-black py-2 px-4 rounded-full hover:bg-red-700 transition-colors">Sign in</a>
+          <a className={styles.button}>Sign in</a>
         </Link>
       </div>
     </div>
@@ -23,7 +22,3 @@ const Page = () => {
 };
 
 export default Page;
-
-// export default Page;
-
-

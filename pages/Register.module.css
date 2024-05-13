@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cedarville+Cursive&family=Dekko&family=Honk&family=Nanum+Gothic+Coding&family=Orbitron:wght@400..900&family=Patrick+Hand&family=Protest+Guerrilla&family=Rubik+Bubbles&family=Rubik+Glitch&family=Rubik+Glitch+Pop&family=Rubik+Maps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Jost:ital,wght@0,100..900;1,100..900&family=Mukta&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch&family=Sacramento&display=swap');
+
 .container {
     display: flex;
     flex-direction: column;
@@ -17,14 +18,15 @@
 }
 
 .title {
-    font-family:  Arial, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 40px;
     font-weight: bold;
-    color: #000; /* Black color for the text */
+    color: rgb(41, 3, 3); /* Black color for the text */
     margin-bottom: 40px;
 }
 
 .inputField {
+    font-family: "Jost", sans-serif;
     font-family:  Arial, Helvetica, sans-serif;
     margin-bottom: 15px;
     width: 100%; /* Full width */
@@ -44,10 +46,10 @@
 }
 
 .button {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: red;
     color: white;
     border: none;
+    font-family: "Rubik Glitch", system-ui;
     padding: 10px 20px;
     border-radius: 20px; /* Rounded edges */
     cursor: pointer;
@@ -55,11 +57,61 @@
     width: 100%; /* Full width button */
 }
 
+
 .button:hover {
     background-color: darkred; /* Darker red on hover */
+}
+
+
+.HomeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(227, 48, 57); /* Adjust the color as needed */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-family: "Rubik Glitch", system-ui;
 }
 
 .message {
     color: red;
     margin-top: 10px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .title {
+        font-size: 30px; /* Smaller font size on tablets */
+        margin-bottom: 30px;
+    }
+
+    .form {
+        width: 20%; /* More padding on the sides */
+        font-size: 15px;
+    }
+
+    .input, .button {
+        padding: 5px 10px; /* Slightly smaller padding */
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px; /* Even smaller font size on mobile devices */
+        margin-bottom: 20px;
+    }
+
+    .input, .button {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+        font-size: 12px; /* Smaller font size for better fit */
+    }
 }

@@ -23,7 +23,9 @@ function Login() {
                 });
                 const data = await response.json();
                 if (response.ok) {
-                    localStorage.setItem('token', data.access_token);  // Ensure you are setting the correct property
+                    localStorage.setItem('token', data.access_token); 
+                    localStorage.setItem('user_id', data.user_id);
+                    localStorage.setItem('username', data.username);
                     setMessage('Login successful');
                     router.push('/create_song');
                 } else {
@@ -35,9 +37,14 @@ function Login() {
             }
         };
     
+    const goHome = () => {
+    router.push('/'); // Redirect to profile page
+};
+
 
     return (
         <div className={styles.container}>
+            <button onClick={goHome} className={styles.HomeButton}>home</button>
             <form onSubmit={handleSubmit} className={styles.form}>
                 <h1 className={styles.title}>Song Maker</h1>
                 <div className={styles.inputField}>
@@ -64,5 +71,8 @@ function Login() {
         </div>
     );
 }
+
+
+
 
 export default Login;

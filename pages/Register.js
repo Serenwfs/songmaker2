@@ -1,12 +1,14 @@
 // src/components/Register.js
 import React, { useState } from 'react';
 import styles from './Register.module.css';
+import { useRouter } from 'next/router';
 
 function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
+    const router = useRouter();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -29,14 +31,21 @@ function Register() {
         } catch (error) {
             setMessage('Network error');
         }
+
+
+    };
+
+    const goHome = () => {
+        router.push('/'); // Redirect to profile page
     };
 
     return (
         <div className={styles.container}>
+            <button onClick={goHome} className={styles.HomeButton}>home</button>
             <div className={styles.form}>
                 <h1 className={styles.title}>Register</h1>
                 <div className={styles.inputField}>
-                    <label>Email:</label>
+                    <label>Email</label>
                     <input
                         type="email"
                         value={email}
@@ -45,7 +54,7 @@ function Register() {
                     />
                 </div>
                 <div className={styles.inputField}>
-                    <label>Username:</label>
+                    <label>Username</label>
                     <input
                         type="text"
                         value={username}
@@ -54,7 +63,7 @@ function Register() {
                     />
                 </div>
                 <div className={styles.inputField}>
-                    <label>Password:</label>
+                    <label>Password</label>
                     <input
                         type="password"
                         value={password}

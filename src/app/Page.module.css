@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Mukta&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Jost:ital,wght@0,100..900;1,100..900&family=Mukta&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch&family=Sacramento&display=swap');
+
+.container {
+    background-color: #fde2ec; /* Light pink background */
+    color: #000; /* Black text */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+}
+
+.title {
+    font-size: 50px; 
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: rgb(41, 3, 3);
+    font-family: "Rubik Glitch", system-ui;
+    font-family: "Raleway", sans-serif;
+}
+
+.description {
+    font-size: 50px; /* xl in Tailwind */
+    margin-bottom: 24px; /* mb-6 in Tailwind */
+    font-family: "Sacramento", cursive;
+    
+    color: #d6323d;
+}
+
+
+@keyframes titleAnimated{
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 100%;
+    }
+  }
+  
+
+.titleAnimated {
+    overflow: hidden;
+    white-space: nowrap; 
+    animation: typing 3.5s steps(40, end); 
+    font-size: 50px;
+    margin-bottom: 24px;
+    font-family: "Sacramento", cursive;
+    color: #d6323d;
+}
+
+.buttons {
+    display: flex;
+    gap: 16px; 
+}
+
+.button {
+    background-color: #EF4444; 
+    color: #ffffff; 
+    padding: 8px 16px;
+    border-radius: 9999px; 
+    transition: background-color 0.3s;
+    font-family: "Rubik Glitch", system-ui;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.button:hover {
+    background-color: #B91C1C; 
+    padding: 12px 20px;
+}
+
+
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 35px; /* Smaller size for smaller screens */
+    }
+    .titleAnimated {
+        font-size: 35px; /* Smaller size for animation */
+    }
+    .description {
+        font-size: 25px; /* Smaller text on smaller screens */
+    }
+
+    .button {
+         
+        padding: 5px 12px;
+       
+    }
+    .button:hover {
+        background-color: #B91C1C; 
+        padding: 8px 16px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 8px;
+    }
+    .title {
+        font-size: 28px; /* Even smaller size for very small screens */
+    }
+    .titleAnimated {
+        font-size: 30px; /* Adjusted for very small screens */
+    }
+    .description {
+        font-size: 25px;
+    }
+    .button {
+         
+        padding: 4px 10px;
+       
+    }
+    .button:hover {
+        background-color: #B91C1C; 
+        padding: 6px 12px;
+    }
+    
+}

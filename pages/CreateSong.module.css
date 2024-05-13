@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cedarville+Cursive&family=Dekko&family=Faster+One&family=Honk&family=Nanum+Gothic+Coding&family=Orbitron:wght@400..900&family=Patrick+Hand&family=Pixelify+Sans:wght@400..700&family=Protest+Guerrilla&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Bubbles&family=Rubik+Glitch&family=Rubik+Glitch+Pop&family=Rubik+Maps&display=swap');
 .container {
     display: flex;
     flex-direction: column;
@@ -6,7 +7,7 @@
     min-height: 100vh;
     background-color: #fbe8f2;/* Light pink background */
     color: #333; /* Dark text for better readability */
-    font-family: Arial, sans-serif; /* Ensuring consistent font */
+    font-family: "Jost", sans-serif; /* Ensuring consistent font */
 }
 
 .form {
@@ -19,7 +20,8 @@
 
 .title {
        /* font-family: "Raleway", sans-serif; */
-       font-family: "Arial";
+       font-family: "Jost", sans-serif;
+       font-family: "Raleway", sans-serif;
 
        /* font-family: "Rubik Glitch", system-ui; */
        
@@ -45,7 +47,7 @@
 .select {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #ff4569; 
+    border: 2px solid #d6323d; 
     box-sizing: border-box;
     background-color: #ffffff;
     border-radius: 40px;
@@ -77,18 +79,21 @@
 }
 .button {
     width: 100%;
-    background-color:rgb(250, 49, 49); /* Pinkish background for the button */
+    background-color: rgb(246, 32, 43); /* Pinkish background for the button */
     color: white;
     border: none;
     padding: 12px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 20px;
+    font-family: "Raleway", sans-serif;
+    transition: background-color 0.3s ease; 
 }
 
 .button:hover {
-    background-color:rgb(250, 175, 175); /* Darker shade on hover */
+    background-color:rgb(252, 98, 98); /* Darker shade on hover */
+   
 }
 
 .message {
@@ -106,7 +111,7 @@
 }
 
 .instrument {
-    background-color: #ff4569;
+    background-color: #d6323d;
     color: white;
     padding: 10px 15px;
     margin: 5px;
@@ -150,7 +155,7 @@
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #333;
+    color: rgb(227, 48, 57);
     text-align: left; /* Center align the header */
 }
 
@@ -172,7 +177,7 @@
 }
 
 .instrumentDetail {
-    background-color: #ff4569; /* Red background for instrument boxes */
+    background-color: rgb(227, 48, 57);/* Red background for instrument boxes */
     color: white;
     padding: 10px;
     margin: 5px;
@@ -183,7 +188,7 @@
 }
 
 .editButton {
-    background-color: #ff2145;
+    background-color:#d6323d;
     color: white;
     padding: 8px 16px;
     border: none;
@@ -194,4 +199,155 @@
     max-width: 200px; /* Button width */
     margin: 20px auto; /* Center button */
     text-align: center;
+}
+
+.logoutButton {
+    position: absolute;
+    top: 20px;      
+    left: 20px;      
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(234, 62, 70); 
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    font-family: "Raleway", sans-serif;
+    font-family: "Rubik Glitch", system-ui;
+}
+
+.logoutButton:hover {
+    background-color: #8e1e1e; 
+}
+
+
+.profileButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(227, 48, 57); /* Adjust the color as needed */
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    font-family: "Rubik Glitch", system-ui;
+}
+
+.profileButton:hover {
+    background-color: #a92323; /* Darker shade on hover for visual feedback */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .form, .songDetails {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    .button, .profileButton, .logoutButton, .editButton {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .inputField {
+        width: 100%;
+    }
+
+    .button, .profileButton, .logoutButton, .editButton {
+        width: auto;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .input, .select {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Specific styles for Profile and Logout Buttons */
+.profileButton, .logoutButton {
+    position: absolute;
+    top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.profileButton {
+    right: 20px; /* Profile button on the right */
+}
+
+.logoutButton {
+    left: 20px; /* Logout button on the left */
+}
+
+.profileButton:hover, .logoutButton:hover {
+    background-color: #d32f2f; /* Darker shade on hover */
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 40px; /* Smaller size for smaller screens */
+    }
+    .description, .titleAnimated {
+        font-size: 18px; /* Slightly smaller to maintain readability */
+    }
+    .button {
+        padding: 8px 16px; /* Smaller padding for compact appearance */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .title {
+        font-size: 30px; /* Further reduced for tablets */
+    }
+    .description, .titleAnimated {
+        font-size: 16px;
+    }
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 24px; /* Small screen adjustments */
+    }
+    .description, .titleAnimated {
+        font-size: 14px;
+    }
+    .button {
+        width: 100%; /* Full width buttons */
+        padding: 8px 10px; /* Adjust padding */
+    }
 }

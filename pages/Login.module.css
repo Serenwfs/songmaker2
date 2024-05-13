@@ -33,7 +33,7 @@
   }
   
   .inputField {
-    font-family: "Arial";
+    font-family: "Raleway", sans-serif;
     margin-bottom: 20px;
     font-size: 18px;
     color: #000000; /* Black for input labels */
@@ -55,6 +55,7 @@
   
   .button {
     font-family: "Raleway", sans-serif;
+    font-family: "Rubik Glitch", system-ui;
     background-color: red;
     color: white;
     border: none;
@@ -73,4 +74,70 @@
     color: red;
     margin-top: 10px;
   }
+
+
+
+.HomeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(227, 48, 57); /* Adjust the color as needed */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  font-family: "Rubik Glitch", system-ui;
+}
   
+  /* Media Queries */
+@media (max-width: 768px) {
+  .title {
+      font-size: 2.5rem; /* 40px on smaller tablets */
+  }
+
+  .form {
+      width: 90%; /* More padding on the sides */
+  }
+
+  .input {
+    width: 100px; /* Adjust based on your design */
+  
+    font-size: 12px;
+
+  }
+
+  .inputField {
+    font: 12px;
+  
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+      font-size: 2rem; /* 32px on mobile devices */
+  }
+
+  .input, .button {
+      padding: 8px 16px; /* Slightly smaller padding */
+  }
+
+  .input {
+    width: 80px; /* Adjust based on your design */
+  
+    font-size: 12px;
+  }
+
+  .inputField {
+  
+    font-size: 12px;
+  
+  }
+
+
+
+}
+
