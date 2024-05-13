@@ -1,3 +1,49 @@
+
+Link to deployed site: https://songmaker2.vercel.app
+
+# Song Maker: An app that gives ideas to musicians 
+
+## Intro 
+
+I created this app to fight against writer's block by giving musicians a list of instruments and chord progressions to add to their compositions. 
+
+As musicians we can often experience lack of inspiration. This impacts your productivity, leading to delays in musical project completion
+
+This app is supposed to help you find inspiration by creating 'Fake' Songs. It mashes up different songs based on user-defined criteria, such as  genre and danceability, offering new creative insights.
+
+
+It outputs lyrics and instrumental tracks (piano, guitar… )  to help you get inspired.
+
+## Design
+### Color Palette
+Primary Color: Light pink  - Used for backgrounds to create a soft, welcoming feel.
+Second Color: Red - Used for buttons and interactive elements to make them stand out
+### Fonts
+Main Font: "Raleway" - Used for headers and titles.
+Secondary Font: "Jost" - Used for body text to complement the headers.
+Third Font: for certain buttons "Rubik Glitch", system-ui. 
+
+<img width="502" alt="image" src="https://github.com/Serenwfs/songmaker2/assets/116518998/4960e8c5-0da4-4109-856c-a0b3b5539243">
+
+
+<img width="495" alt="image" src="https://github.com/Serenwfs/songmaker2/assets/116518998/317e5e7d-b062-4361-ad06-839e6c783515">
+
+
+## Responsive design
+The site looks good on devices of various sizes, from mobile phones to large desktop screens.
+
+## State Management
+It uses React's estate to track user interactions like inputs and authentication status.
+State management also handles visibility and content updates like the lists of songs and user profiles, and takes care of reacting to user actions as well as data fetching.
+
+## API
+
+I used a MySQL database created via Python Flask and deployed it using Heroku as my API. Therefore, the songs that I choose, and some combination of danceability and genre, might not output anything. 
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
