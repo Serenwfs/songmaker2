@@ -67,7 +67,7 @@ export default function CreateSong() {
             if (!response.ok) {
                 if (response.status === 422) {
                     // Custom message for status 422
-                    setMessage("The provided details don't match enough entries in our database.");
+                    setMessage("Sorry we don't have this combination try again :)");
                 } else {
                     // Use the server's error message or default to a general error message
                     setMessage(data.error || "Failed to create song due to a server error.");
