@@ -25,6 +25,7 @@ Main Font: "Raleway" - Used for headers and titles. Secondary Font: "Jost" - Use
 ## Initial idea
 
 This was the original idea that I designed beforehand
+
 <img width="503" alt="image" src="https://github.com/Serenwfs/songmaker2/assets/116518998/16e2087f-406d-4f2f-8b65-abfbb1d56656">
 
 <img width="499" alt="image" src="https://github.com/Serenwfs/songmaker2/assets/116518998/c5de0123-cdfd-48c2-8cf7-4d1516f4f93e">
