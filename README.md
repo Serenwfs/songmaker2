@@ -18,14 +18,14 @@ It outputs lyrics and instrumental tracks (piano, guitar… )  to help you get i
 ### Color Palette
 Primary Color: Light pink  - Used for backgrounds to create a soft, welcoming feel.
 Second Color: Red - Used for buttons and interactive elements to make them stand out
-### Fonts
+### Fonts (google fonts)
 Main Font: "Raleway" - Used for headers and titles.
 Secondary Font: "Jost" - Used for body text to complement the headers.
-Third Font: for certain buttons "Rubik Glitch", system-ui. 
+Third Font: "Rubik Glitch" or certain buttons . 
 
 ### Initial idea 
 
-This was the original idea that I design beforehand
+This was the original idea that I designed beforehand
 
 <img width="502" alt="image" src="https://github.com/Serenwfs/songmaker2/assets/116518998/4960e8c5-0da4-4109-856c-a0b3b5539243">
 
