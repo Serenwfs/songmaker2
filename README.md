@@ -23,6 +23,9 @@ Main Font: "Raleway" - Used for headers and titles.
 Secondary Font: "Jost" - Used for body text to complement the headers.
 Third Font: for certain buttons "Rubik Glitch", system-ui. 
 
+### Inical idea 
+
+This was original idea that I design before hand
 <img width="502" alt="image" src="https://github.com/Serenwfs/songmaker2/assets/116518998/4960e8c5-0da4-4109-856c-a0b3b5539243">
 
 
