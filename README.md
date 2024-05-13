@@ -26,6 +26,7 @@ Third Font: for certain buttons "Rubik Glitch", system-ui.
 ### Initial idea 
 
 This was the original idea that I design beforehand
+
 <img width="502" alt="image" src="https://github.com/Serenwfs/songmaker2/assets/116518998/4960e8c5-0da4-4109-856c-a0b3b5539243">
 
 
