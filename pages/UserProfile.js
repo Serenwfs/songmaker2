@@ -12,6 +12,7 @@ function UserProfile() {
         if (typeof window !== "undefined") {
             const storedUsername = localStorage.getItem('username');
             const userId = localStorage.getItem('user_id');
+            const token = localStorage.getItem('token');
             setUsername(storedUsername);  // update state with username
 
             if (!userId) {
