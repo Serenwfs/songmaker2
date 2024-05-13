@@ -76,13 +76,17 @@ function UserProfile() {
             <h1 className={styles.title}>{username ? `${username}'s Profile` : "User Profile"}</h1>
             <h2 className={styles.title}>My Songs</h2>
             <ul className={styles.list}>
-                {songs.map(song => (
-                    <li key={song.Song_ID} className={styles.songDetails}>
-                        Title: {song.Title}, Genre: {song.Genre}, Danceability: {song.Dancability}
-                        <br/>
-                        Instruments: {song.Instrument_Names}, Chord Progressions: {song.Chord_Progressions}
-                    </li>
-                ))}
+               {songs.length > 0 ? (
+                    songs.map(song => (
+                        <li key={song.Song_ID} className={styles.songDetails}>
+                            Title: {song.Title}, Genre: {song.Genre}, Danceability: {song.Dancability}
+                            <br/>
+                            Instruments: {song.Instrument_Names}, Chord Progressions: {song.Chord_Progressions}
+                        </li>
+                    ))
+                ) : (
+                    <p>No songs to display</p>
+                )}
             </ul>
             <button onClick={handleLogout} className={styles.button}>Logout</button>
             <button onClick={goToCreateSong} className={styles.button}>Create Another Song</button>
