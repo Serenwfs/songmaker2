@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #fbe8f2; /* Light pink background */
+    background-color: #fde2ec; /* Light pink background */
     color: #333; /* Dark text for better readability */
     font-family: Arial, sans-serif; /* Ensuring consistent font */
 }
@@ -33,7 +33,7 @@
 }
 
 .instrumentDetail {
-    background-color: #ff4569; /* Red background for instrument boxes */
+    background-color: #EF4444; /* Red background for instrument boxes */
     color: white;
     padding: 10px;
     margin: 5px;
@@ -43,7 +43,7 @@
 
 .button {
     width: 40%;
-    background-color: #f13542; /* Red background */
+    background-color: #EF4444; /* Red background */
     color: white;
     border: none;
     padding: 12px;
@@ -54,11 +54,11 @@
 }
 
 .button:hover {
-    background-color: #b52828; /* Darker shade on hover */
+    background-color: #EF4444; /* Darker shade on hover */
 }
 
 .message {
-    color: #d32f2f;
+    color: #EF4444;
     font-size: 16px;
     margin-top: 20px;
     text-align: center;

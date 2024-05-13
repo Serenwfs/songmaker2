@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #fbe8f2;  /* Light pink background */
+    background-color: #fde2ec;  /* Light pink background */
 }
 
 .form {
@@ -35,7 +35,7 @@
 .input {
     width: 300px; /* Adjust based on your design */
     padding: 8px;
-    border: 2px solid red; /* Solid red border */
+    border: 2px solid #EF4444; /* Solid red border */
     background-color: transparent;
     color: #000;
     font-size: 16px;
@@ -46,7 +46,7 @@
 }
 
 .button {
-    background-color: red;
+    background-color: #EF4444;
     color: white;
     border: none;
     font-family: "Rubik Glitch", system-ui;
@@ -70,7 +70,7 @@
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: rgb(227, 48, 57); /* Adjust the color as needed */
+    background-color: #EF4444; /* Adjust the color as needed */
     border: none;
     border-radius: 20px;
     cursor: pointer;

@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #fbe8f2;/* Light pink background */
+    background-color: #fde2ec;/* Light pink background */
     color: #333; /* Dark text for better readability */
     font-family: "Jost", sans-serif; /* Ensuring consistent font */
 }
@@ -47,7 +47,7 @@
 .select {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #d6323d; 
+    border: 2px solid #EF4444; 
     box-sizing: border-box;
     background-color: #ffffff;
     border-radius: 40px;
@@ -79,7 +79,7 @@
 }
 .button {
     width: 100%;
-    background-color: rgb(246, 32, 43); /* Pinkish background for the button */
+    background-color:#EF4444; /* Pinkish background for the button */
     color: white;
     border: none;
     padding: 12px;
@@ -111,7 +111,7 @@
 }
 
 .instrument {
-    background-color: #d6323d;
+    background-color: #EF4444;
     color: white;
     padding: 10px 15px;
     margin: 5px;
@@ -177,7 +177,7 @@
 }
 
 .instrumentDetail {
-    background-color: rgb(227, 48, 57);/* Red background for instrument boxes */
+    background-color: #EF4444;/* Red background for instrument boxes */
     color: white;
     padding: 10px;
     margin: 5px;
@@ -185,10 +185,11 @@
     flex-basis: 45%; /* Adjust based on your layout preference */
     text-align: center; /* Center text inside boxes */
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
 }
 
 .editButton {
-    background-color:#d6323d;
+    background-color:#EF4444;
     color: white;
     padding: 8px 16px;
     border: none;
@@ -208,7 +209,7 @@
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: rgb(234, 62, 70); 
+    background-color: #EF4444; 
     border: none;
     border-radius: 20px;
     cursor: pointer;
