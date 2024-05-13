@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './Page.module.css'; // Import the CSS module
+import styles from './Page.module.css'; // CSS module
 
 const Page = () => {
 
-  
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Song Maker</h1>

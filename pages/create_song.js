@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 export default function CreateSong() {
     const [genres, setGenres] = useState([]);
     const [selectedGenre, setSelectedGenre] = useState('');
-    const [dancability, setDancability] = useState('1');  // Default to 'Not really danceable'
+    const [dancability, setDancability] = useState('1');  
     const [title, setTitle] = useState('');
     const [message, setMessage] = useState('');
     const [songDetails, setSongDetails] = useState(null);
@@ -66,19 +66,17 @@ export default function CreateSong() {
     
             if (!response.ok) {
                 if (response.status === 422) {
-                    // Custom message for status 422
                     setMessage("Sorry we don't have this combination try again :)");
                 } else {
-                    // Use the server's error message or default to a general error message
                     setMessage(data.error || "Failed to create song due to a server error.");
                 }
                 setSongDetails(null);
-                return; // Stop further execution in case of an error
+                return; 
             }
             const data = await response.json();
             localStorage.setItem('user_id', data.user_id);
             if (data.access_token) {
-                localStorage.setItem('token', data.access_token); // Update the token if a new one is received
+                localStorage.setItem('token', data.access_token);
             }
             setMessage("Song created successfully!");
             setSongDetails(data.song_details);
@@ -101,8 +99,8 @@ export default function CreateSong() {
     
             if (response.ok) {
                 console.log('Logged out successfully');
-                localStorage.removeItem('token');  // Remove the token from local storage
-                router.push('/').catch(err => console.error('Redirection failed:', err)); // Ensure correct case and path
+                localStorage.removeItem('token');  
+                router.push('/').catch(err => console.error('Redirection failed:', err)); 
             } else {
                 throw new Error('Failed to log out on server');
             }
@@ -112,7 +110,7 @@ export default function CreateSong() {
     };
 
     const goToProfile = () => {
-        router.push('/UserProfile'); // Redirect to profile page
+        router.push('/UserProfile'); // redirect to profile page
     };
     
     

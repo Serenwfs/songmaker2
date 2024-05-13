@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import styles from './UserProfile.module.css';  // Import your module here
+import styles from './UserProfile.module.css'; 
 
 function UserProfile() {
     const [songs, setSongs] = useState([]);
     const [error, setError] = useState('');
-    const [username, setUsername] = useState('');  // Store username in state
+    const [username, setUsername] = useState('');  // to stortore username in state
     const router = useRouter();
 
     useEffect(() => {
         if (typeof window !== "undefined") {
-            // Code here will only run on the client side
             const storedUsername = localStorage.getItem('username');
             const userId = localStorage.getItem('user_id');
-            setUsername(storedUsername);  // Update state with username
+            setUsername(storedUsername);  // update state with username
 
             if (!userId) {
                 setError('User not identified');
@@ -53,7 +52,7 @@ function UserProfile() {
     
             if (response.ok) {
                 console.log('Logged out successfully');
-                localStorage.removeItem('token');  // Remove the token from local storage
+                localStorage.removeItem('token');  // takes out the token from  storage
                 router.push('/').catch(err => console.error('Redirection failed:', err)); // Ensure correct case and path
             } else {
                 throw new Error('Failed to log out on server');
@@ -64,7 +63,7 @@ function UserProfile() {
     };
 
     const goToCreateSong = () => {
-        router.push('/create_song');  // Redirect to the Create Song page
+        router.push('/create_song');  // redirect to the create Song page
     };
 
     if (error) {

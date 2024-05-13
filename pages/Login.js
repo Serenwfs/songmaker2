@@ -1,8 +1,6 @@
-
-
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from './Login.module.css';  // correct import of CSS module
+import styles from './Login.module.css';  
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -38,7 +36,7 @@ function Login() {
         };
     
     const goHome = () => {
-    router.push('/'); // Redirect to profile page
+    router.push('/'); 
 };
 
 

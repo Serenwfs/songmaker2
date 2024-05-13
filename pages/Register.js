@@ -1,4 +1,3 @@
-// src/components/Register.js
 import React, { useState } from 'react';
 import styles from './Register.module.css';
 import { useRouter } from 'next/router';
@@ -36,7 +35,7 @@ function Register() {
     };
 
     const goHome = () => {
-        router.push('/'); // Redirect to profile page
+        router.push('/');
     };
 
     return (

@@ -5,9 +5,9 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #fde2ec; /* Light pink background */
-    color: #333; /* Dark text for better readability */
-    font-family: Arial, sans-serif; /* Ensuring consistent font */
+    background-color: #fde2ec; 
+    color: #333; /* dark text */
+    font-family: Arial, sans-serif;
 }
 
 .title {
@@ -18,8 +18,8 @@
 }
 
 .list {
-    width: 80%; /* Responsive width */
-    max-width: 600px; /* Maximum width */
+    width: 80%; /* responsive width */
+    max-width: 600px; 
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -29,21 +29,21 @@
 
 .songDetails {
     margin-bottom: 20px;
-    border-bottom: 1px solid #eee; /* Light line for each detail */
+    border-bottom: 1px solid #eee; 
 }
 
 .instrumentDetail {
-    background-color: #EF4444; /* Red background for instrument boxes */
+    background-color: #EF4444; 
     color: white;
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
-    text-align: center; /* Center text inside boxes */
+    text-align: center; 
 }
 
 .button {
     width: 40%;
-    background-color: #EF4444; /* Red background */
+    background-color: #EF4444; 
     color: white;
     border: none;
     padding: 12px;
@@ -54,7 +54,7 @@
 }
 
 .button:hover {
-    background-color: #EF4444; /* Darker shade on hover */
+    background-color: #EF4444; 
 }
 
 .message {
@@ -77,36 +77,36 @@
     }
 
     .button {
-        width: 50%; /* Larger button for easier interaction on touch devices */
+        width: 50%; /* Larger button for easier interaction */
     }
 }
 
 @media (max-width: 768px) {
     .title {
-        font-size: 24px; /* Smaller font size for smaller devices */
+        font-size: 24px; 
         margin-bottom: 8px;
     }
 
     .list {
-        width: 95%; /* More width to use more screen space */
-        max-width: none; /* Remove max-width limitation */
+        width: 95%; 
+        max-width: none; 
     }
 
     .button {
-        width: 60%; /* Even larger button for mobile devices */
+        width: 60%; 
     }
 }
 
 @media (max-width: 480px) {
     .title {
-        font-size: 20px; /* Much smaller font size for very small devices */
+        font-size: 20px; 
     }
 
     .input, .select {
-        font-size: 14px; /* Smaller font size for inputs and selects */
+        font-size: 14px; 
     }
 
     .button {
-        width: 75%; /* Full-width button for very small devices */
+        width: 75%; 
     }
 }
