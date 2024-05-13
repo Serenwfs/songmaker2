@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from './UserProfile.module.css';  // Import your module here
-import fetchWithAuth from './utils/fetchWithAuth';
 
 function UserProfile() {
     const [songs, setSongs] = useState([]);
