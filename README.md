@@ -1,4 +1,4 @@
-Netlify Link to deployed site: [https://songmaker2.vercel.app](https://resplendent-meerkat-095d5c.netlify.app)
+Netlify Link to deployed site:[ (https://resplendent-meerkat-095d5c.netlify.app)](https://resplendent-meerkat-095d5c.netlify.app)
 
 # Song Maker: An app that gives ideas to musicians
 
