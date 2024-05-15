@@ -1,6 +1,6 @@
 Netlify Link to deployed site:[ (https://resplendent-meerkat-095d5c.netlify.app)](https://resplendent-meerkat-095d5c.netlify.app)
 
-# Song Maker: An app that gives ideas to musicians
+# Song Maker: App that gives ideas to musicians
 
 ## Intro
 
