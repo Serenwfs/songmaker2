@@ -34,7 +34,7 @@ The site looks good on devices of various sizes, from mobile phones to large des
 
 ## State Management
 
-It uses React's estate to track user interactions like inputs and authentication status. State management also handles visibility and content updates like the lists of songs and user profiles, and takes care of reacting to user actions as well as data fetching.
+It uses React's state to track user interactions like inputs and authentication status. State management also handles visibility and content updates like the lists of songs and user profiles, and takes care of reacting to user actions as well as data fetching.
 
 ## API
 
